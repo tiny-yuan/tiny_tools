@@ -1,0 +1,8 @@
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010053.0','1.0','¿ØÖÆÃæ°å-ÏäÌå')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010052.0','1.0','js_p1')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010051.0','1.0','Ê°ÒôßäÍ·Ì×Í·')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010049.0','1.0','ÒôÇ»À®°È')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010267.0','1.0','FPC-¶Á¿¨Æ÷ÌìÏß')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010260.0','1.0','7´çÆÁ-ÉîÍØ')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010050.0','1.0','Ê°ÒôßäÍ·')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010037','10010281.0','1.0','1.27mmßäÍ·Ïß-2Õë-50mm')
