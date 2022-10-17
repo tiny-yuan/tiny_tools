@@ -1,0 +1,148 @@
+###
+
+POST http://192.168.2.240:8000/login
+Content-Type: application/json
+
+{
+    "username" : "admin",
+    "password" : "admin"
+}
+
+###获取uart接口
+
+GET http://192.168.2.148:8000/api/interface/uart
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTg0NTMyODksImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjkxNzI4OX0.h-IejqSo8kzUICeS5JnPFWH-s9equrNYcCIW6C7rKnc
+Content-Type: application/json
+
+###获取gpout接口
+
+GET http://192.168.2.233:8000/api/interface/gpout
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTg0NTMyODksImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjkxNzI4OX0.h-IejqSo8kzUICeS5JnPFWH-s9equrNYcCIW6C7rKnc
+Content-Type: application/json
+
+###获取所有任务列表
+
+GET http://192.168.2.178:8000/api/controller/tasklist
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTgzOTQyOTUsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjg1ODI5NX0.R2yeFtKfE442_y6PyX9gsWQk7DIKFy9zwOklkMhWcWo
+Content-Type: application/json
+
+
+###根据任务名查询相应的动作序列
+
+
+POST  http://192.168.2.12:8000/api/controller/action
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTgzOTQyOTQsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjg1ODI5NH0.E-mumZ1xICfILln4hNb3mXxrx-Ajfq5bWXRqpmGYhQw
+Content-Type: application/json
+
+{
+  "name":"123"
+}
+
+
+###添加大屏开机任务
+
+
+POST http://192.168.2.148:8000/api/controller/task
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTg0NTMyODksImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjkxNzI4OX0.h-IejqSo8kzUICeS5JnPFWH-s9equrNYcCIW6C7rKnc
+Content-Type: application/json
+
+{
+  "name":"大屏开机",
+  "task": [{
+    "type": "gpio",
+    "hwid": "HW_GPIO_POWER_MDISPLAYER",
+    "baud": 0,
+    "parity": 0,
+    "val": "1",
+    "delay": 5
+  },{
+    "type": "com",
+    "hwid": "HW_UART_DISPLAY_COM",
+    "baud": 9600,
+    "Parity":0,
+    "val": "0325C7640D"
+  }
+]
+}
+
+###添加大屏关机任务
+
+
+POST http://192.168.2.148:8000/api/controller/task
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTg0NTMyODksImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjkxNzI4OX0.h-IejqSo8kzUICeS5JnPFWH-s9equrNYcCIW6C7rKnc
+Content-Type: application/json
+
+{
+  "name":"大屏关机",
+  "task": [{
+    "type": "com",
+    "hwid": "HW_UART_DISPLAY_COM",
+    "baud": 9600,
+    "val": "0325C7640D",
+    "delay" :15
+  },
+  {
+    "type": "gpio",
+    "hwid": "HW_GPIO_POWER_MDISPLAYER",
+    "val": "0"
+  }]
+}
+
+### 获取多媒体配置信息
+
+
+Get http://192.168.2.12:8000/api/system/platform
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTgzOTQyOTQsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjg1ODI5NH0.E-mumZ1xICfILln4hNb3mXxrx-Ajfq5bWXRqpmGYhQw
+Content-Type: application/json
+
+### 设置多媒体配置信息
+
+
+POST http://192.168.2.12:8000/api/system/platform
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NTgzOTQyOTQsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTYyNjg1ODI5NH0.E-mumZ1xICfILln4hNb3mXxrx-Ajfq5bWXRqpmGYhQw
+Content-Type: application/json
+
+{
+  "videoIn": [
+    {
+      "resolution": "1920X1080",
+      "audio": false
+    },
+    {
+      "resolution": "",
+      "audio": false
+    },
+    {
+      "resolution": "",
+      "audio": false
+    },
+    {
+      "resolution": "1920X1080",
+      "audio": false
+    }
+  ],
+  "videoOut": [
+    {
+      "poweron": "大屏开机",
+      "poweroff": "大屏关机"
+    },
+    {
+      "poweron": "",
+      "poweroff": ""
+    }
+  ],
+  "line": {
+    "gain": 0,
+    "bass": 0,
+    "treble": 0,
+    "volume": 30,
+    "phantom": false
+  },
+  "mic": {
+    "gain": 0,
+    "bass": 0,
+    "treble": 0,
+    "volume": 30,
+    "phantom": true
+  }
+}

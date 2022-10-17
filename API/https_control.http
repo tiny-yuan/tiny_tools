@@ -1,0 +1,131 @@
+
+POST https://192.168.2.32/api/getconfig
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk0Njg3MTAsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTY0NzkzMjcxMH0.Lw7D8Lo15stzPhmaiKCH3U8-uS_1NHYmDhv26n8FO5o
+Content-Type: application/json
+
+{
+  "class" : ["base"]
+}
+
+###
+POST https://192.168.2.19/api/getconfig
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk0Njg3MTAsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTY0NzkzMjcxMH0.Lw7D8Lo15stzPhmaiKCH3U8-uS_1NHYmDhv26n8FO5o
+Content-Type: application/json
+
+{
+  "class" : ["platform"]
+}
+
+###
+POST https://192.168.2.114/api/setconfig
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk0Njg3MTAsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTY0NzkzMjcxMH0.Lw7D8Lo15stzPhmaiKCH3U8-uS_1NHYmDhv26n8FO5o
+Content-Type: application/json
+
+{
+  "platform": {
+    "video": {
+      "input": [
+        {
+          "resolution": "1366X768",
+          "audio": false
+        },
+        {
+          "resolution": "",
+          "audio": false
+        },
+        {
+          "resolution": "",
+          "audio": false
+        },
+        {
+          "resolution": "1920X1080",
+          "audio": true
+        }
+      ],
+      "output": [
+        {
+          "poweron": "大屏开机",
+          "poweroff": "大屏关机"
+        },
+        {
+          "poweron": "",
+          "poweroff": ""
+        }
+      ]
+    },
+    "audio": {
+      "line": {
+        "gain": 0,
+        "bass": 0,
+        "treble": 0,
+        "phantom": false
+      },
+      "mic": {
+        "gain": 0,
+        "bass": 0,
+        "treble": 0,
+        "phantom": true
+      }
+    },
+    "recorder": {
+      "comtype": "",
+      "comport": "HW_UART_RS232-3",
+      "args": {
+        "poweron": "on",
+        "poweroff": "sleep",
+        "counterdown": true,
+        "time": 600
+      }
+    },
+    "computer": {
+      "ipaddr": "192.168.2.202",
+      "hwaddr": "00e04c087481",
+      "port": 14680,
+      "passwd": "",
+      "power": "HW_GPIO_POWER_EXTEND0"
+    }
+  }
+}
+
+###
+POST https://192.168.2.114/api/setconfig
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk0Njg3MTAsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTY0NzkzMjcxMH0.Lw7D8Lo15stzPhmaiKCH3U8-uS_1NHYmDhv26n8FO5o
+Content-Type: application/json
+
+{
+  "base": {
+    "name": "高三一班1",
+    "location": "育新楼3楼301",
+    "server": "192.168.2.22",
+    "screensaver": {
+      "on": {
+        "time": 2,
+        "style": 0
+      },
+      "off": {
+        "time": 2,
+        "style": 0
+      }
+    },
+    "network": {
+      "dhcp": true,
+      "ipaddr": "",
+      "netmask": "",
+      "gateway": ""
+    },
+    "ntp": "ntp.aliyun.com",
+    "monitor": {
+      "mstream": "rtsp://admin:Admin123456@192.168.4.200:554/Streaming/Channels/101"
+    }
+  }
+}
+
+###
+GET https://192.168.4.11/api/interface/gpout
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk0Njg3MTAsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTY0NzkzMjcxMH0.Lw7D8Lo15stzPhmaiKCH3U8-uS_1NHYmDhv26n8FO5o
+Content-Type: application/json
+
+###
+GET https://192.168.4.11/api/interface/uart
+token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2Nzk0Njg3MTAsImp0aSI6ImFkbWluIiwiaXNzIjoiamlhc2lvbiIsIm5iZiI6MTY0NzkzMjcxMH0.Lw7D8Lo15stzPhmaiKCH3U8-uS_1NHYmDhv26n8FO5o
+Content-Type: application/json

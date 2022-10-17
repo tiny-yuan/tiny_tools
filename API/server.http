@@ -1,0 +1,29 @@
+# 登录
+Post https://dev.jiasion.cn:9000/api/site/login
+Content-Type: application/json
+
+{
+  "data": {
+    "username": "outbook",
+    "password": "outbook",
+    "source": "web"
+  },
+  "sign": {},
+  "timeout": 10000
+}
+###
+# 获取服务器信息
+GET  https://dev.jiasion.cn:9000/api/site/stat
+
+###
+# 获取设备状态
+POST https://dev.jiasion.cn:9000/api/device/status?access_token=AVKyE2wxrD2_3z1J3CKiYjflMcXiwEf9
+Content-Type: application/json
+
+{
+  "data": {
+    "recursion": true,
+    "page": 0,
+    "limit": 30
+  }
+}

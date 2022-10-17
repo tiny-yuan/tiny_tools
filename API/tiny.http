@@ -1,0 +1,71 @@
+# 接口测试
+GET http://127.0.0.1:8000/api1/hello/
+
+###
+
+# 请求体测试
+POST http://127.0.0.1:8000/api/request_body
+
+
+
+###
+
+# json测试
+POST http://127.0.0.1:8000/api/json/
+Content-Type: application/json
+
+{
+    "city":"北京",
+    "year":"2022"
+}
+
+###
+
+# 请求头测试
+POST http://127.0.0.1:8000/api/request_header/
+Content-Type: application/x-www-form-urlencoded
+
+city=北京&year=2022
+
+###
+
+# 响应对象
+POST http://127.0.0.1:8000/api/response_obj/
+# Content-Type: application/x-www-form-urlencoded
+
+# city=北京&year=2022
+
+###
+
+# 重定向
+POST http://127.0.0.1:8000/api/red/
+
+###
+
+# 重定向
+POST http://127.0.0.1:8000/api/res/
+
+###
+
+# 设置cookie
+GET  http://127.0.0.1:8000/api/do_cookie
+
+###
+
+# 获取cookie
+GET  http://127.0.0.1:8000/api/cat_cookie
+
+###
+
+# 设置session
+GET http://127.0.0.1:8000/api/set_session
+
+###
+# 获取session
+GET http://127.0.0.1:8000/api/get_session
+
+
+
+
+
+
