@@ -13,7 +13,7 @@ list_id = ["75529b04"]
 list_id = json.dumps(list_id)
 # print(list_id)
 test = Api('192.168.2.253')
-num = 5
+num = 10
 sleep_num1 = 600
 sleep_num2 = 65
 count_num = 0
@@ -29,6 +29,7 @@ while True:
     if count_num == num:
         print("*" * 100)
         print("{}次场景切换完成！".format(num))
+        break
 
 # #添加iot设备
 
