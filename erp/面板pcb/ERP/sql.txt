@@ -42,7 +42,6 @@ insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) value
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010217','3','E1, E2, E3')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010220','1','Q3')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010221','1','L6')
-insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010224','1','T3')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010227','1','Q4')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010229','7','Rp1, Rp2, Rp3, Rp4, Rp5, Rp6, Rp7')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010234','1','R10')
@@ -73,3 +72,4 @@ insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) value
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010262','1','U11')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010264','1','R96')
 insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010265','1','Y3')
+insert into erp.bom_item (main_meterial,sub_meterial,quantity,description) values('10010052','10010328','1','B1')

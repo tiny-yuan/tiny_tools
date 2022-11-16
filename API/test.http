@@ -1,0 +1,33 @@
+# 开始录像
+
+post http://172.20.65.252/action/SetRecordTopic?userName=admin&password=admin&fingerId=12&cmd=startRecord
+###
+
+# 暂停录制
+post http://172.20.65.252/action/SetRecordTopic?userName=admin&password=admin&fingerId=12&cmd=pauseRecord
+
+###
+
+# 继续录制
+post http://172.20.65.252/action/SetRecordTopic?userName=admin&password=admin&fingerId=12&cmd=continueRecord
+
+###
+# 录播停止
+post http://172.20.65.252/action/SetRecordTopic?userName=admin&password=admin&fingerId=12&cmd=stopRecord
+
+###
+# 关机
+post http://172.20.65.252/action/SetPowerManageTopic?userName=admin&password=admin&fingerId=12&cmd=poweroff
+
+###
+# 开机
+post http://172.20.65.252/action/poweron
+
+###
+# 开始直播
+POST http://172.20.65.252/action/SetLiveTopic?userName=admin&password=admin&fingerId=12&cmd=startLive
+
+###
+# 停止直播
+POST http://172.20.65.252/action/SetLiveTopic?userName=admin&password=admin&fingerId=12&cmd=stopLive
+
